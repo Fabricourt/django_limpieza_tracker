@@ -50,7 +50,7 @@ MIDDLEWARE_CLASSES = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'limpiatracker_master.urls'
+ROOT_URLCONF = 'limpiatracker.urls'
 
 TEMPLATES = [
     {
@@ -68,7 +68,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'limpiatracker_master.wsgi.application'
+WSGI_APPLICATION = 'limpiatracker.wsgi.application'
 
 
 # Database
