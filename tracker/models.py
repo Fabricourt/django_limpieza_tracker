@@ -11,5 +11,5 @@ class opeDuquesa(models.Model):
 	circunscripcion = models.CharField(max_length=2)
 	ton = models.IntegerField()
 
-def __unicode__(self):
+	def __unicode__(self):
 		return u'%s' % (self.date) 
