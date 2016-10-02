@@ -17,16 +17,16 @@ class Camion(models.Model):
 class opeDuquesa(models.Model):
 	id = models.AutoField(primary_key=True)
 	date = models.DateField()
-	ficha_camion = models.ForeignKey(Camion)
+	camion = models.ForeignKey(Camion)
 	circunscripcion = models.CharField(max_length=2)
-	ton = models.IntegerField()
+	ton = models.FloatField()
 
 	def __unicode__(self):
 		return u'%s' % (self.date)
 
 class Compania(models.Model):
 	nombre = models.CharField(max_length=20)
-	camiones = models.ManyToManyField(Camion)
+	camiones_owned = models.ManyToManyField(Camion)
 
 	def __unicode__(self):
 		return u'%s' % (self.nombre)
