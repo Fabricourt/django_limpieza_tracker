@@ -5,7 +5,7 @@ from django.db import models
 # Create your models here.
 
 class Circunscripcion(models.Model):
-	num = models.IntegerField(unique=True, primary_key=True)
+	num = models.CharField(max_length=6, unique=True, primary_key=True)
 	capacidad = models.FloatField()
 
 	def __unicode__(self):
@@ -19,6 +19,11 @@ class Camion(models.Model):
 
 	def __unicode__(self):
 		return u'%s' % (self.ficha)
+
+
+class SalidaTransfer(models.Model):
+	camion = models.ForeignKey(Camion)
+	ton = models.FloatField()
 
 
 class Transfer(models.Model):

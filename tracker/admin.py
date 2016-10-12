@@ -2,7 +2,7 @@ from django.contrib import admin
 from import_export import resources
 
 from import_export.admin import ImportExportMixin, ExportActionModelAdmin 
-from tracker.models import opeDuquesa, Camion, Compania
+from tracker.models import opeDuquesa, Camion, Compania, Circunscripcion
 
 # Register your models here.
 
@@ -24,3 +24,4 @@ class CamionesAdmin(ImportExportMixin, admin.ModelAdmin):
 admin.site.register(opeDuquesa, opeDuquesaAdmin)
 admin.site.register(Camion, CamionesAdmin)
 admin.site.register(Compania)
+admin.site.register(Circunscripcion)
