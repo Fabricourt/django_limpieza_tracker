@@ -1,7 +1,10 @@
 {% extends "base.html" %}
+{% load django_tables2 %}
+
 
  {% block content %}
-
+  
+  {% render_table table %}
 	<div class="mdl-cell mdl-cell--12-col">
  	<table class="striped centered">
         <thead>
