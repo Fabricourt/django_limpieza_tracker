@@ -50,6 +50,7 @@ class opeDuquesa(models.Model):
 	camion = models.ForeignKey(Camion)
 	circunscripcion = models.ForeignKey(Circunscripcion)
 	ton = models.FloatField()
+	viajes = models.IntegerField()
 
 	def __unicode__(self):
 		return u'%s' % (self.date)

@@ -9,36 +9,57 @@
  	<table class="striped centered">
         <thead>
           <tr>
-              <th data-field="id">Camiones</th>
-              <th data-field="name">Fecha</th>
-              <th data-field="price">Item Price</th>
+              <th data-field="id">camion</th>
+              <th data-field="name">01</th>
+              <th data-field="name">02</th>
+              <th data-field="name">03</th>
+              <th data-field="name">04</th>
+              <th data-field="name">05</th>
+              <th data-field="name">06</th>
+              <th data-field="name">07</th>
+              <th data-field="name">08</th>
+              <th data-field="name">09</th>
+              <th data-field="name">10</th>
+              <th data-field="name">11</th>
+              <th data-field="name">12</th>
+              <th data-field="name">13</th>
+              <th data-field="name">14</th>
+              <th data-field="name">15</th>
+              <th data-field="name">16</th>
+              <th data-field="name">17</th>
+              <th data-field="name">18</th>
+              <th data-field="name">19</th>
+              <th data-field="name">20</th>
+              <th data-field="name">21</th>
+              <th data-field="name">22</th>
+              <th data-field="name">23</th>
+              <th data-field="name">24</th>
+              <th data-field="name">25</th>
+              <th data-field="name">26</th>
+              <th data-field="name">27</th>
+              <th data-field="name">28</th>
+              <th data-field="name">29</th>
+              <th data-field="name">30</th>
+              <th data-field="name">31</th>
+              <th data-field="price">Total</th>
           </tr>
         </thead>
 
         <tbody>
+        {% for Duquesa in opeDuquesaTwo %}
           <tr>
-            <td>Alvin</td>
-            <td>Eclair</td>
-            <td>$0.87</td>
+            <td>{{ object_list.camion }}</td>
+            <td>{{ object.ton }}</td>
           </tr>
-          <tr>
-            <td>Alan</td>
-            <td>Jellybean</td>
-            <td>$3.76</td>
-          </tr>
-          <tr>
-            <td>Jonathan</td>
-            <td>Lollipop</td>
-            <td>$7.00</td>
-          </tr>
+        {% endfor %}
         </tbody>
       </table>
+
+      
+
 	</div>
 
-  <table>
-    <thead><tr><th>Normal</th><th>Upper</th></tr></thead>
-    <tbody><tr><td>Hi there!</td><td>HI THERE!</td></tr></tbody>
-  </table>
+
 
 
  {% endblock content %}

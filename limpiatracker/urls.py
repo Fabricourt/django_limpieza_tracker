@@ -15,10 +15,14 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+#from django.contrib.auth.views import login, logout
+
 from tracker.views import home, recoleccion_circ_2_3
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^home/', home),
     url(r'^recocirc23/', recoleccion_circ_2_3),
+
 ]
+    	    
