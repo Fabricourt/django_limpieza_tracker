@@ -15,7 +15,15 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+#from django.contrib.auth.views import login, logout
+
+from tracker.views import home, recoleccion_circ_2_3
+from reclamaciones.views import reclamacion_new_form
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^$', home),
+    url(r'^recocirc23/$', recoleccion_circ_2_3),
+    url(r'^reclamaciones/new/$', reclamacion_new_form, name='reclamacion_new_form')
+
 ]

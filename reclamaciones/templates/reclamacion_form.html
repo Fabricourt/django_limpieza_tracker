@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+
+ {% block content %}
+
+ <div class="row">
+
+      <div class="col s4">
+        <!-- Promo Content 1 goes here -->
+        <i class="large material-icons">face</i>
+        <h5 class="center-align">Solicite los datos al municipe</h5>
+      </div>
+      <div class="col s4">
+        <!-- Promo Content 2 goes here -->
+        <i class="large material-icons">assignment_turned_in</i>
+        <h5>Complete el formulario con los datos</h5>
+      </div>
+      <div class="col s4">
+        <!-- Promo Content 3 goes here -->
+        <i class="large material-icons">check_circle</i>
+        <h5>Presione el boton de guardar</h5>
+      </div>
+
+    </div>
+
+<div class="divider"></div>
+   
+  
+	<div class="row">
+    <form class="col s12" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+      <button class="btn waves-effect waves-light" type="submit">Submit
+        <i class="material-icons right">send</i>
+    </button>
+    </form>
+  </div>
+
+<div class="row">
+  <div class="col s12 center-align">
+    
+  </div>
+</div>
+
+ {% endblock content %}

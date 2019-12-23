@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% load django_tables2 %}
+
+
+ {% block content %}
+  
+  {% render_table table %}
+	<div class="mdl-cell mdl-cell--12-col">
+ 	<table class="striped centered">
+        <thead>
+          <tr>
+              <th data-field="id">camion</th>
+              <th data-field="name">01</th>
+              <th data-field="name">02</th>
+              <th data-field="name">03</th>
+              <th data-field="name">04</th>
+              <th data-field="name">05</th>
+              <th data-field="name">06</th>
+              <th data-field="name">07</th>
+              <th data-field="name">08</th>
+              <th data-field="name">09</th>
+              <th data-field="name">10</th>
+              <th data-field="name">11</th>
+              <th data-field="name">12</th>
+              <th data-field="name">13</th>
+              <th data-field="name">14</th>
+              <th data-field="name">15</th>
+              <th data-field="name">16</th>
+              <th data-field="name">17</th>
+              <th data-field="name">18</th>
+              <th data-field="name">19</th>
+              <th data-field="name">20</th>
+              <th data-field="name">21</th>
+              <th data-field="name">22</th>
+              <th data-field="name">23</th>
+              <th data-field="name">24</th>
+              <th data-field="name">25</th>
+              <th data-field="name">26</th>
+              <th data-field="name">27</th>
+              <th data-field="name">28</th>
+              <th data-field="name">29</th>
+              <th data-field="name">30</th>
+              <th data-field="name">31</th>
+              <th data-field="price">Total</th>
+          </tr>
+        </thead>
+
+        <tbody>
+        {% for Duquesa in opeDuquesaTwo %}
+          <tr>
+            <td>{{ object_list.camion }}</td>
+            <td>{{ object.ton }}</td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+
+      
+
+	</div>
+
+
+
+
+ {% endblock content %}
