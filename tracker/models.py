@@ -1,11 +1,33 @@
 from __future__ import unicode_literals
-
 from django.db import models
 
 # Create your models here.
 
+
+class Supervisor(models.Model):
+	nombre = models.CharField(max_length=50, unique=True, primary_key=True)
+	flota = models.CharField(max_length=14)
+	telefono = models.CharField(max_length=14)
+	compactadores = models.IntegerField()
+	camioncitos = models.IntegerField()
+
+	def __unicode__(self):
+		return u'%s' % (self.nombre)
+
+
+
+class Sectores(models.Model):
+	nombre = models.CharField(max_length=30, unique=True, primary_key=True)
+	supervisor_area = models.ForeignKey(Supervisor)
+
+	def __unicode__(self):
+		return u'%s' % (self.nombre)
+
+
+
 class Circunscripcion(models.Model):
 	num = models.CharField(max_length=6, unique=True, primary_key=True)
+	sectores = models.ManyToManyField(Sectores)
 	capacidad = models.FloatField()
 
 	def __unicode__(self):
@@ -61,6 +83,7 @@ class Compania(models.Model):
 
 	def __unicode__(self):
 		return u'%s' % (self.nombre)
+
 
 
 

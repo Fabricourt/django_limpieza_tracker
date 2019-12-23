@@ -40,7 +40,12 @@ INSTALLED_APPS = [
     'import_export',
     'django_tables2',
     'tracker',
+    'reclamaciones',
+    'users',
+
 ]
+
+CRISPY_TEMPLATE_PACK = 'uni_form'
 
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
